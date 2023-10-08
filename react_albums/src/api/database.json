@@ -5,6 +5,12 @@
       "albumArtist": "jkl;",
       "albumRating": "5",
       "id": 1
+    },
+    {
+      "albumTitle": "album title",
+      "albumArtist": "artist",
+      "albumRating": "0",
+      "id": 2
     }
   ]
 }

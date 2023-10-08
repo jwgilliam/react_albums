@@ -1,10 +1,12 @@
 import "./Album.css"
 
-export default function Album(props) {
-  <div className="album_card">
-    <p>{props.title}</p>
-    <p>{props.artist}</p>
-    <p>{props.rating}</p>
+export default function Album({ album }) {
+  return (
+    <div className="album_card">
+      <p>{album.albumTitle}</p>
+      <p>{album.albumArtist}</p>
+      <p>{album.albumRating}</p>
 
-  </div>
+    </div>)
 }
+

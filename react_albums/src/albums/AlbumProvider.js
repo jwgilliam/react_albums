@@ -7,7 +7,7 @@ export function AlbumProvider(props) {
 
   useEffect(() => {
     getAlbums()
-    console.log("check")
+
   }, [])
 
   const getAlbums = () => {

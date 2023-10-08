@@ -8,7 +8,7 @@ export default function AlbumList() {
   return (
     <div className="album_list">
       {albums.map((album) => {
-        return <Album albumTitle={album.albumTitle} albumArtist={album.albumArtist} albumRating={album.albumRating} key={album.id} />
+        return <Album album={album} key={album.id} />
       })}
     </div>
   )
