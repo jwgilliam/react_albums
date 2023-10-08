@@ -1,5 +1,10 @@
 {
   "albums": [
-    {}
+    {
+      "albumTitle": "asdf",
+      "albumArtist": "jkl;",
+      "albumRating": "5",
+      "id": 1
+    }
   ]
 }

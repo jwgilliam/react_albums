@@ -1,4 +1,4 @@
-import { useContext, createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const albumContext = createContext()
 
@@ -14,6 +14,7 @@ export function AlbumProvider(props) {
     return fetch("http://localhost:8088/albums")
       .then((response) => response.json())
       .then((response) => setAlbums(response))
+
   }
 
   const addAlbum = (album) => {

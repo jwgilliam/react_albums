@@ -1,4 +1,4 @@
-import "Album.css"
+import "./Album.css"
 
 export default function Album(props) {
   <div className="album_card">
