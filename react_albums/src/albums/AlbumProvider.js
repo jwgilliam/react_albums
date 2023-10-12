@@ -28,7 +28,14 @@ export function AlbumProvider(props) {
       .then(getAlbums)
   }
 
+  const deleteAlbum = (album) => {
+    return fetch(`http://localhost:8088/albums/${album.id}`, {
+      method: "Delete"
+    })
+      .then(getAlbums)
+  }
+
   return (
-    <albumContext.Provider value={{ albums, addAlbum }}>{props.children}</albumContext.Provider>
+    <albumContext.Provider value={{ albums, addAlbum, deleteAlbum }}>{props.children}</albumContext.Provider>
   )
 }
