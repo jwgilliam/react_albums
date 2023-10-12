@@ -1,7 +1,7 @@
 {
   "albums": [
     {
-      "albumTitle": "editing",
+      "albumTitle": "editing jr",
       "albumArtist": "artist",
       "albumRating": "0",
       "id": 2
@@ -11,6 +11,12 @@
       "albumArtist": "Maybe?",
       "albumRating": "3",
       "id": 3
+    },
+    {
+      "albumTitle": "editing jr",
+      "albumArtist": "editing sr",
+      "albumRating": "1",
+      "id": 4
     }
   ]
 }
