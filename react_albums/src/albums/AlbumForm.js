@@ -1,20 +1,31 @@
 import "./AlbumForm.css"
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { albumContext } from './AlbumProvider';
 
 export default function AlbumForm() {
 
-  const { addAlbum } = useContext(albumContext)
+  const { addAlbum, selectedAlbum, setSelectedAlbum, editAlbum } = useContext(albumContext)
+
+  useEffect(() => {
+    selectedAlbum ? document.querySelector(".title_input").value = selectedAlbum.albumTitle : document.querySelector(".title_input").value = ""
+  }, [selectedAlbum])
+
+
+
 
   const submitHandler = (event) => {
     event.preventDefault();
+
+    if (selectedAlbum) {
+      selectedAlbum.albumTitle = document.querySelector(".title_input").value
+      editAlbum(selectedAlbum)
+        .then(clearForm)
+    }
+
     const newAlbum = {
       albumTitle: document.querySelector(".title_input").value,
       albumArtist: document.querySelector(".artist_input").value,
       albumRating: document.querySelector(".rating_input").value
-
-
-
     }
 
     addAlbum(newAlbum).then(clearForm)
@@ -27,6 +38,7 @@ export default function AlbumForm() {
     document.querySelector(".title_input").value = ""
     document.querySelector(".artist_input").value = ""
     document.querySelector(".rating_input").value = ""
+    setSelectedAlbum()
   }
   return (
     <form onSubmit={submitHandler}>

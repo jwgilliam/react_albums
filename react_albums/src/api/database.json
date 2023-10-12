@@ -1,16 +1,16 @@
 {
   "albums": [
     {
-      "albumTitle": "asdf",
-      "albumArtist": "jkl;",
-      "albumRating": "5",
-      "id": 1
-    },
-    {
-      "albumTitle": "album title",
+      "albumTitle": "editing",
       "albumArtist": "artist",
       "albumRating": "0",
       "id": 2
+    },
+    {
+      "albumTitle": "editing",
+      "albumArtist": "Maybe?",
+      "albumRating": "3",
+      "id": 3
     }
   ]
 }
