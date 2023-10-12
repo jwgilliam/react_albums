@@ -4,6 +4,7 @@ export const albumContext = createContext()
 
 export function AlbumProvider(props) {
   const [albums, setAlbums] = useState([])
+  const [selectedAlbum, setSelectedAlbum] = useState()
 
   useEffect(() => {
     getAlbums()
@@ -35,7 +36,18 @@ export function AlbumProvider(props) {
       .then(getAlbums)
   }
 
+  const editAlbum = (album) => {
+    return fetch(`http://localhost:8088/albums/${album.id}`, {
+      method: "Put",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(album)
+    })
+      .then(getAlbums)
+  }
+
   return (
-    <albumContext.Provider value={{ albums, addAlbum, deleteAlbum }}>{props.children}</albumContext.Provider>
+    <albumContext.Provider value={{ albums, addAlbum, deleteAlbum, editAlbum }}>{props.children}</albumContext.Provider>
   )
 }
