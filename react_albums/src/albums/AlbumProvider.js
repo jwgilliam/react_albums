@@ -48,6 +48,6 @@ export function AlbumProvider(props) {
   }
 
   return (
-    <albumContext.Provider value={{ albums, addAlbum, deleteAlbum, editAlbum }}>{props.children}</albumContext.Provider>
+    <albumContext.Provider value={{ albums, addAlbum, deleteAlbum, editAlbum, selectedAlbum, setSelectedAlbum }}>{props.children}</albumContext.Provider>
   )
 }
