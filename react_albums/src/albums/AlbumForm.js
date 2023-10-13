@@ -17,9 +17,13 @@ export default function AlbumForm() {
     event.preventDefault();
 
     if (selectedAlbum) {
+      console.log(selectedAlbum)
       selectedAlbum.albumTitle = document.querySelector(".title_input").value
+      selectedAlbum.albumArtist = document.querySelector(".artist_input").value
+      selectedAlbum.albumRating = document.querySelector(".rating_input").value
       editAlbum(selectedAlbum)
         .then(clearForm)
+      return
     }
 
     const newAlbum = {
