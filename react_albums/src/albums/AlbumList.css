@@ -2,7 +2,5 @@
   display: flex;
   flex-flow: row-wrap;
   flex-basis: content;
-  padding: 10px;
-  border: 2px solid black;
-  margin-bottom: 10px;
+
 }
