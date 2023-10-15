@@ -1,9 +1,9 @@
 {
   "albums": [
     {
-      "albumTitle": "editing 4",
-      "albumArtist": "editing 5",
-      "albumRating": "5",
+      "albumTitle": "final edit test",
+      "albumArtist": " work now",
+      "albumRating": "4",
       "id": 2
     },
     {
@@ -17,6 +17,18 @@
       "albumArtist": "editing sr",
       "albumRating": "1",
       "id": 4
+    },
+    {
+      "albumTitle": "adding new album",
+      "albumArtist": "thank you ",
+      "albumRating": "5",
+      "id": 5
+    },
+    {
+      "albumTitle": "hello",
+      "albumArtist": "test",
+      "albumRating": "5",
+      "id": 6
     }
   ]
 }

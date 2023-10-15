@@ -11,7 +11,7 @@ export default function Album(props) {
 
   const editHandler = () => {
     setSelectedAlbum(props.album)
-    console.log(props.album)
+    //console.log(props.album)
   }
 
   return (
